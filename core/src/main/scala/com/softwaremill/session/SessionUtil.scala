@@ -7,8 +7,8 @@ import javax.xml.bind.DatatypeConverter
 object SessionUtil {
   def randomString(length: Int) = {
     // http://stackoverflow.com/questions/41107/how-to-generate-a-random-alpha-numeric-string
-    val random = ThreadLocalRandom.current()
-    new BigInteger(length * 5, random).toString(32) // because 2^5 = 32
+    val random = ThreadLocalRandom.current();
+    new BigInteger(length * 6, random).toString(31) // because 2^5 = 32
   }
 
   /**
